@@ -1,0 +1,447 @@
+
+$fondo: rgb(235, 207, 171);
+$trasfondo: #fff;
+
+ /* Nombrar las areas */
+
+header {
+    grid-area: cabeza;
+    background-color:orange;
+    padding: 10px;
+}
+
+h2{
+    grid-area: secciones;
+    background-color: $fondo;
+    padding-left: 5px;
+}
+nav {
+    grid-area: menu;
+    background-color: $fondo;
+    padding: 5px;
+}
+
+div{
+    grid-area: descripcion;
+    background-color: $fondo;
+    padding: 5px;
+    }
+
+ul {
+    grid-area: productos;  
+    background-color: $fondo;
+    padding: 10px;   
+    list-style: none;
+}
+
+section{
+    grid-area: imagenes;
+    background-color: $fondo;
+    padding: 10px;
+}
+
+aside {
+    grid-area: flores; 
+    background-color: $fondo;   
+    padding: 10px;
+}
+
+form {
+    grid-area: formulario;
+    background-color: $fondo;
+    padding: 10px;
+}
+
+footer {
+    grid-area: pie;
+    background-color:$fondo;
+    padding: 10px;
+    padding-right: 5px;
+}
+
+
+/*RESPONSIVE*/
+
+/* DESKTOP */
+@media (min-width: 1024px){
+    body {
+        height: 100vh;
+        text-align: center;
+    }
+
+    table{
+        margin-left: 35%;
+    }
+
+span:hover {
+    background-color:white;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color: $fondo;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+}
+   /* GRIDS POR AREAS */
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+       /* 3 columnas y 6 filas */
+       "menu cabeza formulario"/* fila 1 */
+        "menu secciones formulario"/*fila2*/
+        "menu descripcion formulario"/*fila3*/
+       "menu productos formulario"/* fila 4 */
+       "menu imagenes formulario"/* fila 5 */
+        "pie pie pie"/*fila 6*/
+    ;
+       /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+
+/*Animaciones*/
+
+.transicion1{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion1:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.transicion2{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion2:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.transicion3{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion3:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.rebote{
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes rebote{
+    0%{
+        border-radius: 1%;
+        transform:skew(50deg);
+    }
+
+    20%{
+
+        transform: rotateY(95deg);
+    
+    }
+
+    30%{
+        transform:translateX(-0.5vw);
+        transform:translateX(0.5vw);
+    }
+
+    70%{
+        transform:translateX(-0.5vw);
+    }
+
+    100%{
+        border-radius: 50%;   
+    }
+}
+
+
+
+
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction:column;
+        padding-left: 15%;
+        text-align:center;
+    }
+
+    .secciones{
+        margin:0;
+    }
+
+    /* GALERIA FLEX */
+    .productosFlex {
+    display: flex;
+    flex-flow:row nowrap;
+    background-color:$fondo;
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px){
+    body {
+        height: 100vh;
+        text-align: center;
+    }
+
+    table{
+        margin-left: 35%;
+    }
+
+span:hover {
+    background-color:white;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color:$fondo;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+}
+   /* GRIDS POR AREAS */
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+       /* 2 columnas y 7 filas */
+       "menu cabeza"/* fila 1 */
+        "menu secciones"/*fila2*/
+        "menu descripcion"/*fila3*/
+       "formulario productos"/* fila 4 */
+       "formulario imagenes"/* fila 5 */
+        "formulario flores"/*fila 6*/
+        "pie pie"/*fila 7*/
+    ;
+       /* Dimensiones */
+    grid: template columns 100px;;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction:column;
+        padding-left: 15%;
+    }
+
+    .secciones{
+        margin:0;
+    }
+    /* GALERIA FLEX */
+    .productosFlex {
+    display: flex;
+    flex-flow:row nowrap;
+    background-color:$fondo;
+}
+}
+
+/*Animaciones*/
+
+.transicion1{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion1:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+.transicion2{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion2:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+.transicion3{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion3:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+h1{
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes rebote{
+    0%{
+        border-radius: 1%;
+        transform:skew(50deg);
+    }
+
+    20%{
+
+        transform: rotateY(95deg);
+    
+    }
+
+    30%{
+        transform:translateX(-0.5vw);
+        transform:translateX(0.5vw);
+    }
+
+    70%{
+        transform:translateX(-0.5vw);
+    }
+
+    100%{
+        border-radius: 50%;   
+    }
+}
+
+/* Smartphone */
+@media (max-width: 480px){
+    body {
+        height: 100vh;
+        text-align: center;
+    }
+
+    table{
+        margin-left: 35%;
+    }
+    aside{
+        padding-left: 1rem;
+        margin:0%
+    }
+
+
+/*MIXINS*/
+$anchura: 100px;
+$margin:1rem;
+
+@mixin imagen ($anchura, $margin){
+
+    width:$anchura;
+    margin-left:$margin;
+}
+
+.imagen{
+@include imagen (100px, 1rem);
+}
+
+.imagen{
+    @include imagen (100px,1rem);
+}
+
+.imagen{
+    @include imagen (100px, 1rem);
+}
+
+
+
+span:hover {
+    background-color:white;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color: $fondo;
+    border-radius: 4px;
+    margin: 0rem;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-left: 1rem;
+}
+   /* GRIDS POR AREAS */
+
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+    "menu cabeza"/* fila 1 */
+    "menu secciones"/*fila2*/
+    "menu descripcion"/*fila3*/
+   "formulario productos"/* fila 4 */
+   "formulario imagenes"/* fila 5 */
+    "pie pie"/*fila 6*/
+;
+
+       /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+    }
+
+    .secciones{
+        margin:0;
+    }
+    /* GALERIA FLEX */
+    .productosFlex {
+        display: flex;
+    flex-flow:column;
+    background-color:$fondo;
+
+    
+}
+}

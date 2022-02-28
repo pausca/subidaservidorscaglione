@@ -1,0 +1,497 @@
+/*Esrilos generales*/
+/* Nombrar las areas */
+header {
+  grid-area: cabeza;
+  background-color: orange;
+  padding: 10px;
+}
+
+h2 {
+  grid-area: secciones;
+  background-color: #ebcfab;
+  padding-left: 5px;
+}
+
+nav {
+  grid-area: menu;
+  background-color: #ebcfab;
+  padding: 5px;
+}
+
+div {
+  grid-area: descripcion;
+  background-color: #ebcfab;
+  padding: 5px;
+}
+
+ul {
+  grid-area: productos;
+  background-color: #ebcfab;
+  padding: 10px;
+  list-style: none;
+}
+
+section {
+  grid-area: imagenes;
+  background-color: #ebcfab;
+  padding: 10px;
+}
+
+aside {
+  grid-area: flores;
+  background-color: #ebcfab;
+  padding: 10px;
+}
+
+form {
+  grid-area: formulario;
+  background-color: #ebcfab;
+  padding: 10px;
+}
+
+footer {
+  grid-area: pie;
+  background-color: #ebcfab;
+  padding: 10px;
+  padding-right: 5px;
+}
+
+/*RESPONSIVE*/
+/* DESKTOP */
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    text-align: center;
+  }
+
+  table {
+    margin-left: 35%;
+  }
+
+  span:hover {
+    background-color: white;
+    color: red;
+  }
+
+  /* Articulos de galeria */
+  article {
+    background-color: #ebcfab;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "menu cabeza formulario" "menu secciones formulario" "menu descripcion formulario" "menu productos formulario" "menu imagenes formulario" "pie pie pie";
+    /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  span {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 2px;
+  }
+
+  /*Animaciones*/
+  .transicion1 {
+    background-color: #fff;
+    position: static;
+    padding: 10px 10px 5px 10px;
+  }
+
+  .transicion1:hover {
+    transform: scale(2, 2);
+    z-index: 9;
+  }
+
+  .transicion2 {
+    background-color: #fff;
+    position: static;
+    padding: 10px 10px 5px 10px;
+  }
+
+  .transicion2:hover {
+    transform: scale(2, 2);
+    z-index: 9;
+  }
+
+  .transicion3 {
+    background-color: #fff;
+    position: static;
+    padding: 10px 10px 5px 10px;
+  }
+
+  .transicion3:hover {
+    transform: scale(2, 2);
+    z-index: 9;
+  }
+
+  .rebote {
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+  }
+
+  @keyframes rebote {
+    0% {
+      border-radius: 1%;
+      transform: skew(50deg);
+    }
+    20% {
+      transform: rotateY(95deg);
+    }
+    30% {
+      transform: translateX(-0.5vw);
+      transform: translateX(0.5vw);
+    }
+    70% {
+      transform: translateX(-0.5vw);
+    }
+    100% {
+      border-radius: 50%;
+    }
+  }
+}
+/* MENU FLEX */
+.flexMenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.secciones {
+  margin: 0;
+}
+
+/* GALERIA FLEX */
+.productosFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #ebcfab;
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    height: 100vh;
+    text-align: center;
+  }
+
+  table {
+    margin-left: 35%;
+  }
+
+  span:hover {
+    background-color: white;
+    color: red;
+  }
+
+  /* Articulos de galeria */
+  article {
+    background-color: #ebcfab;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "formulario productos" "formulario imagenes" "formulario flores" "pie pie";
+    /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  span {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 2px;
+  }
+
+  /* MENU FLEX */
+  .flexMenu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+  }
+
+  .secciones {
+    margin: 0;
+  }
+
+  /* GALERIA FLEX */
+  .productosFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #ebcfab;
+  }
+}
+/*Animaciones*/
+.transicion1 {
+  background-color: #fff;
+  position: static;
+  padding: 10px 10px 5px 10px;
+}
+
+.transicion1:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 9;
+}
+
+.transicion2 {
+  background-color: #fff;
+  position: static;
+  padding: 10px 10px 5px 10px;
+}
+
+.transicion2:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 9;
+}
+
+.transicion3 {
+  background-color: #fff;
+  position: static;
+  padding: 10px 10px 5px 10px;
+}
+
+.transicion3:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 9;
+}
+
+h1 {
+  animation-name: rebote;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes rebote {
+  0% {
+    border-radius: 1%;
+    transform: skew(50deg);
+  }
+  20% {
+    transform: rotateY(95deg);
+  }
+  30% {
+    transform: translateX(-0.5vw);
+    transform: translateX(0.5vw);
+  }
+  70% {
+    transform: translateX(-0.5vw);
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+/* Smartphone */
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+    text-align: center;
+  }
+
+  table {
+    margin-left: 35%;
+  }
+
+  aside {
+    padding-left: 1rem;
+    margin: 0%;
+  }
+
+  /*MIXINS*/
+  .imagen {
+    width: 100px;
+    margin-left: 1rem;
+  }
+
+  .imagen {
+    width: 100px;
+    margin-left: 1rem;
+  }
+
+  .imagen {
+    width: 100px;
+    margin-left: 1rem;
+  }
+
+  span:hover {
+    background-color: white;
+    color: red;
+  }
+
+  /* Articulos de galeria */
+  article {
+    background-color: #ebcfab;
+    border-radius: 4px;
+    margin: 0rem;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-left: 1rem;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "formulario productos" "formulario imagenes" "pie pie";
+    /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  span {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 2px;
+  }
+
+  /* MENU FLEX */
+  .flexMenu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+  }
+
+  .secciones {
+    margin: 0;
+  }
+
+  /* GALERIA FLEX */
+  .productosFlex {
+    display: flex;
+    flex-flow: column;
+    background-color: #ebcfab;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  height: 100vh;
+}
+
+/*Tipografia*/
+body header h1 {
+  font-family: "Dancing Script", cursive;
+  font-family: "Indie Flower", cursive;
+  font-family: "Parisienne", cursive;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  font-family: "Indie Flower", cursive;
+}
+
+.contacto, .productos {
+  background-color: #ebcfab;
+  text-align: center;
+  color: grey;
+}
+.contacto h2, .productos h2 {
+  color: blueviolet;
+}
+
+.productos {
+  color: black;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.fondo {
+  background-color: white;
+  color: blueviolet;
+}
+
+.fondoUno {
+  background-color: #ebcfab;
+  margin: 0rem 1.5rem;
+}
+
+header h1 {
+  color: crimson;
+  background-color: orange;
+}
+
+.color {
+  color: darkmagenta;
+}
+
+.flor {
+  background-color: #ebcfab;
+}
+
+.centerMenu {
+  padding: 1rem 9rem 1rem 9rem;
+}
+
+.menuDos {
+  padding: 1rem 14rem;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+/*MAPAS*/
+.boton--Inicio {
+  background-color: #da445d;
+  text-align: center;
+}
+
+.boton--productos {
+  background-color: blue;
+  text-align: center;
+}
+
+.boton--flores {
+  background-color: white;
+  text-align: center;
+}
+
+.boton--registrate {
+  background-color: green;
+  text-align: center;
+}
+
+.boton--contacto {
+  background-color: purple;
+  text-align: center;
+}
+
+.titulo5 {
+  background-color: #fd274b;
+}
+
+/*# sourceMappingURL=destino.css.map */

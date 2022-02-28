@@ -1,0 +1,85 @@
+//Estilos generales
+/*Esrilos generales*/
+
+@import "responsive";
+@import "general";
+
+//clases
+
+.contacto{
+    background-color: $fondo;
+    text-align: center;
+    color: grey;
+    h2{
+        color: blueviolet
+
+    }
+}
+
+.productos{
+    @extend .contacto;
+    color:black;
+}
+
+
+.border {
+    border: 1px solid black;
+}
+
+.fondo{
+    background-color:white;
+    color:blueviolet;
+}
+.fondoUno{
+    background-color:$fondo;
+    margin:0rem 1.5rem;
+
+}
+
+header{
+
+    h1{
+        color:crimson;
+        background-color: orange;
+    } 
+
+}
+
+.color{
+    color:darkmagenta
+}
+
+.flor{
+background-color:$fondo;
+}
+
+.centerMenu{
+    padding: 1rem 9rem 1rem 9rem;
+}
+
+.menuDos{
+    padding: 1rem 14rem;
+    margin:1rem 2rem 1rem 2rem;
+}
+
+/*MAPAS*/
+$mapa:(
+    Inicio: rgb(218, 68, 93),
+    productos: blue,
+    flores: white,
+    registrate: green,
+    contacto:purple,
+
+);
+
+@each $secciones, $colorinche in $mapa{
+    .boton--#{$secciones} { 
+        background-color: $colorinche;
+        text-align: center;
+
+    }
+}
+
+.titulo5{
+    background-color:rgb(253, 39, 75);
+}
