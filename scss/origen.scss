@@ -45,9 +45,6 @@ header{
 
 }
 
-.color{
-    color:darkmagenta
-}
 
 .flor{
 background-color:$fondo;
@@ -55,29 +52,6 @@ background-color:$fondo;
 
 .centerMenu{
     padding: 1rem 9rem 1rem 9rem;
-}
-
-.menuDos{
-    padding: 1rem 14rem;
-    margin:1rem 2rem 1rem 2rem;
-}
-
-/*MAPAS*/
-$mapa:(
-    Inicio: rgb(218, 68, 93),
-    productos: blue,
-    flores: white,
-    registrate: green,
-    contacto:purple,
-
-);
-
-@each $secciones, $colorinche in $mapa{
-    .boton--#{$secciones} { 
-        background-color: $colorinche;
-        text-align: center;
-
-    }
 }
 
 .titulo5{

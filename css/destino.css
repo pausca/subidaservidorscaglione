@@ -8,50 +8,50 @@ header {
 
 h2 {
   grid-area: secciones;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding-left: 5px;
 }
 
 nav {
   grid-area: menu;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 5px;
 }
 
 div {
   grid-area: descripcion;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 5px;
 }
 
 ul {
   grid-area: productos;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 10px;
   list-style: none;
 }
 
 section {
   grid-area: imagenes;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 10px;
 }
 
 aside {
   grid-area: flores;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 10px;
 }
 
 form {
   grid-area: formulario;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 10px;
 }
 
 footer {
   grid-area: pie;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   padding: 10px;
   padding-right: 5px;
 }
@@ -75,7 +75,7 @@ footer {
 
   /* Articulos de galeria */
   article {
-    background-color: #ebcfab;
+    background-color: #f3d0de;
     border-radius: 4px;
     margin: 5px;
     text-align: center;
@@ -180,7 +180,7 @@ footer {
 .productosFlex {
   display: flex;
   flex-flow: row nowrap;
-  background-color: #ebcfab;
+  background-color: #f3d0de;
 }
 
 /* TABLET */
@@ -201,7 +201,7 @@ footer {
 
   /* Articulos de galeria */
   article {
-    background-color: #ebcfab;
+    background-color: #f3d0de;
     border-radius: 4px;
     margin: 5px;
     text-align: center;
@@ -216,7 +216,6 @@ footer {
     /* grid por areas */
     grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "formulario productos" "formulario imagenes" "formulario flores" "pie pie";
     /* Dimensiones */
-    grid: template columns 100px;
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -245,7 +244,7 @@ footer {
   .productosFlex {
     display: flex;
     flex-flow: row nowrap;
-    background-color: #ebcfab;
+    background-color: #f3d0de;
   }
 }
 /*Animaciones*/
@@ -323,20 +322,57 @@ h1 {
     margin: 0%;
   }
 
+  /*Animaciones*/
+  .transicion1 {
+    position: static;
+    padding: 0;
+  }
+
+  .transicion1:hover {
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+  }
+
+  .transicion2 {
+    position: static;
+    padding: 0;
+  }
+
+  .transicion2:hover {
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+  }
+
+  .transicion3 {
+    position: static;
+    padding: 0;
+  }
+
+  .transicion3:hover {
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+  }
+
   /*MIXINS*/
   .imagen {
     width: 100px;
     margin-left: 1rem;
+    background-color: #f3d0de;
+    background-color: #f3d0de;
   }
 
   .imagen {
     width: 100px;
     margin-left: 1rem;
+    background-color: #f3d0de;
+    background-color: #f3d0de;
   }
 
   .imagen {
     width: 100px;
     margin-left: 1rem;
+    background-color: #f3d0de;
+    background-color: #f3d0de;
   }
 
   span:hover {
@@ -346,7 +382,7 @@ h1 {
 
   /* Articulos de galeria */
   article {
-    background-color: #ebcfab;
+    background-color: #f3d0de;
     border-radius: 4px;
     margin: 0rem;
     text-align: center;
@@ -389,9 +425,34 @@ h1 {
   .productosFlex {
     display: flex;
     flex-flow: column;
-    background-color: #ebcfab;
+    background-color: #f3d0de;
   }
 }
+.contactoNav {
+  padding-right: 50px;
+}
+
+.floresTable {
+  padding-right: 250px;
+  background-color: #f3d0de;
+}
+
+.fondu {
+  background-color: #f3d0de;
+}
+
+.productosNav {
+  padding-right: 50px;
+}
+
+.sinMargen {
+  padding: 30px;
+}
+
+.letras {
+  color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -416,7 +477,7 @@ body {
 }
 
 .contacto, .productos {
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   text-align: center;
   color: grey;
 }
@@ -438,7 +499,7 @@ body {
 }
 
 .fondoUno {
-  background-color: #ebcfab;
+  background-color: #f3d0de;
   margin: 0rem 1.5rem;
 }
 
@@ -447,47 +508,12 @@ header h1 {
   background-color: orange;
 }
 
-.color {
-  color: darkmagenta;
-}
-
 .flor {
-  background-color: #ebcfab;
+  background-color: #f3d0de;
 }
 
 .centerMenu {
   padding: 1rem 9rem 1rem 9rem;
-}
-
-.menuDos {
-  padding: 1rem 14rem;
-  margin: 1rem 2rem 1rem 2rem;
-}
-
-/*MAPAS*/
-.boton--Inicio {
-  background-color: #da445d;
-  text-align: center;
-}
-
-.boton--productos {
-  background-color: blue;
-  text-align: center;
-}
-
-.boton--flores {
-  background-color: white;
-  text-align: center;
-}
-
-.boton--registrate {
-  background-color: green;
-  text-align: center;
-}
-
-.boton--contacto {
-  background-color: purple;
-  text-align: center;
 }
 
 .titulo5 {
