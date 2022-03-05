@@ -1,8 +1,8 @@
 /*Esrilos generales*/
+/*Estilos generales sass*/
 /* Nombrar las areas */
 header {
   grid-area: cabeza;
-  background-color: orange;
   padding: 10px;
 }
 
@@ -43,12 +43,6 @@ aside {
   padding: 10px;
 }
 
-form {
-  grid-area: formulario;
-  background-color: #f3d0de;
-  padding: 10px;
-}
-
 footer {
   grid-area: pie;
   background-color: #f3d0de;
@@ -58,18 +52,29 @@ footer {
 
 /*RESPONSIVE*/
 /* DESKTOP */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   body {
     height: 100vh;
     text-align: center;
+    background-color: #f3d0de;
+  }
+
+  header {
+    background-color: orange;
   }
 
   table {
     margin-left: 35%;
   }
 
+  /*clases*/
+  .margenTitulo {
+    padding: 80px;
+    margin-top: 1px;
+  }
+
   span:hover {
-    background-color: white;
+    background-color: orange;
     color: red;
   }
 
@@ -88,7 +93,7 @@ footer {
   #gridAreas {
     display: grid;
     /* grid por areas */
-    grid-template-areas: "menu cabeza formulario" "menu secciones formulario" "menu descripcion formulario" "menu productos formulario" "menu imagenes formulario" "pie pie pie";
+    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "menu imagenes" "menu productos" "pie pie";
     /* Dimensiones */
     grid: template columns 100px;
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
@@ -142,6 +147,7 @@ footer {
     animation-name: rebote;
     animation-iteration-count: infinite;
     animation-duration: 3s;
+    background-color: orange;
   }
 
   @keyframes rebote {
@@ -184,18 +190,43 @@ footer {
 }
 
 /* TABLET */
-@media (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
   body {
     height: 100vh;
     text-align: center;
+    background-color: #f3d0de;
+  }
+
+  header {
+    background-color: orange;
   }
 
   table {
     margin-left: 35%;
   }
 
+  /*Clases*/
+  .menuTablet {
+    padding-top: 10px;
+  }
+
+  .introTitulo {
+    margin-top: 30px;
+  }
+
+  .intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .regist {
+    padding-bottom: 0.01px;
+    padding-top: 10px;
+  }
+
   span:hover {
-    background-color: white;
+    background-color: orange;
     color: red;
   }
 
@@ -214,7 +245,7 @@ footer {
   #gridAreas {
     display: grid;
     /* grid por areas */
-    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "formulario productos" "formulario imagenes" "formulario flores" "pie pie";
+    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "menu imagenes" "menu productos" "pie pie";
     /* Dimensiones */
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
@@ -307,10 +338,14 @@ h1 {
   }
 }
 /* Smartphone */
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   body {
     height: 100vh;
     text-align: center;
+  }
+
+  header {
+    background-color: orange;
   }
 
   table {
@@ -376,7 +411,7 @@ h1 {
   }
 
   span:hover {
-    background-color: white;
+    background-color: orange;
     color: red;
   }
 
@@ -394,7 +429,7 @@ h1 {
   #gridAreas {
     display: grid;
     /* grid por areas */
-    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "formulario productos" "formulario imagenes" "pie pie";
+    grid-template-areas: "menu cabeza" "menu secciones" "menu descripcion" "productos productos" "imagenes imagenes" "pie pie";
     /* Dimensiones */
     grid: template columns 100px;
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
@@ -426,6 +461,7 @@ h1 {
     display: flex;
     flex-flow: column;
     background-color: #f3d0de;
+    padding: 20px;
   }
 }
 .contactoNav {
@@ -494,18 +530,13 @@ body {
 }
 
 .fondo {
-  background-color: white;
+  background-color: #f3d0de;
   color: blueviolet;
 }
 
 .fondoUno {
   background-color: #f3d0de;
   margin: 0rem 1.5rem;
-}
-
-header h1 {
-  color: crimson;
-  background-color: orange;
 }
 
 .flor {
@@ -518,6 +549,11 @@ header h1 {
 
 .titulo5 {
   background-color: #fd274b;
+}
+
+header h1 {
+  color: crimson;
+  background-color: orange;
 }
 
 /*# sourceMappingURL=destino.css.map */

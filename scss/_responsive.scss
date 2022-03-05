@@ -1,4 +1,5 @@
 
+/*Estilos generales sass*/
 $fondo: rgb(243, 208, 222);
 $trasfondo: #fff;
 
@@ -6,7 +7,6 @@ $trasfondo: #fff;
 
 header {
     grid-area: cabeza;
-    background-color:orange;
     padding: 10px;
 }
 
@@ -46,12 +46,6 @@ aside {
     padding: 10px;
 }
 
-form {
-    grid-area: formulario;
-    background-color: $fondo;
-    padding: 10px;
-}
-
 footer {
     grid-area: pie;
     background-color:$fondo;
@@ -62,19 +56,31 @@ footer {
 
 /*RESPONSIVE*/
 
+
 /* DESKTOP */
-@media (min-width: 1024px){
+@media only screen and (min-width: 1024px){
     body {
         height: 100vh;
         text-align: center;
+        background-color: $fondo;
     }
+
+    header{
+        background-color: orange;
+    }
+
 
     table{
         margin-left: 35%;
     }
+    /*clases*/
+    .margenTitulo{
+        padding: 80px;
+        margin-top: 1px;
+    }
 
 span:hover {
-    background-color:white;
+    background-color: orange;
     color: red;
 } 
 
@@ -93,13 +99,13 @@ span:hover {
     display: grid;
        /* grid por areas */
     grid-template-areas:
-       /* 3 columnas y 6 filas */
-       "menu cabeza formulario"/* fila 1 */
-        "menu secciones formulario"/*fila2*/
-        "menu descripcion formulario"/*fila3*/
-       "menu productos formulario"/* fila 4 */
-       "menu imagenes formulario"/* fila 5 */
-        "pie pie pie"/*fila 6*/
+       /* 2 columnas y 6 filas */
+       "menu cabeza"/* fila 1 */
+        "menu secciones"/*fila2*/
+        "menu descripcion"/*fila3*/
+       "menu imagenes"/* fila 4 */
+       "menu productos"/* fila 5 */
+        "pie pie"/*fila 6*/
     ;
        /* Dimensiones */
     grid: template columns 100px;
@@ -155,6 +161,7 @@ footer{
     animation-name: rebote;
     animation-iteration-count: infinite;
     animation-duration: 3s;
+    background-color: orange;
 }
 
 @keyframes rebote{
@@ -185,7 +192,6 @@ footer{
 
 
 
-
 }
     /* MENU FLEX */
     .flexMenu {
@@ -207,18 +213,42 @@ footer{
 }
 
 /* TABLET */
-@media (min-width: 481px) and (max-width: 1023px){
+@media only screen and (min-width: 481px) and (max-width: 1023px){
     body {
         height: 100vh;
         text-align: center;
+        background-color: $fondo;
+    }
+
+    header{
+        background-color: orange;
     }
 
     table{
         margin-left: 35%;
     }
+/*Clases*/
+    .menuTablet{
+        padding-top: 10px;
+    }
+
+    .introTitulo{
+        margin-top: 30px;
+    }
+
+    .intro{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .regist{
+    padding-bottom:0.01px;
+    padding-top: 10px;
+    }
 
 span:hover {
-    background-color:white;
+    background-color:orange;
     color: red;
 } 
 
@@ -237,14 +267,13 @@ span:hover {
     display: grid;
        /* grid por areas */
     grid-template-areas:
-       /* 2 columnas y 7 filas */
+       /* 2 columnas y 6 filas */
        "menu cabeza"/* fila 1 */
         "menu secciones"/*fila2*/
         "menu descripcion"/*fila3*/
-       "formulario productos"/* fila 4 */
-       "formulario imagenes"/* fila 5 */
-        "formulario flores"/*fila 6*/
-        "pie pie"/*fila 7*/
+       "menu imagenes"/* fila 4 */
+       "menu productos"/* fila 5 */
+        "pie pie"/*fila 6*/
     ;
        /* Dimensiones */
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
@@ -269,6 +298,7 @@ footer{
     .secciones{
         margin:0;
     }
+
     /* GALERIA FLEX */
     .productosFlex {
     display: flex;
@@ -345,10 +375,15 @@ h1{
 }
 
 /* Smartphone */
-@media (max-width: 480px){
+@media only screen and (max-width: 480px){
     body {
         height: 100vh;
         text-align: center;
+
+    }
+
+    header{
+        background-color: orange;
     }
 
     table{
@@ -392,8 +427,8 @@ h1{
 }
 
 /*MIXINS*/
-$anchura: 100px;
-$margin:0;
+$anchura: 5px;
+$margin:2;
 
 @mixin imagen ($anchura, $margin){
 
@@ -421,7 +456,7 @@ background-color: $fondo;
 
 
 span:hover {
-    background-color:white;
+    background-color:orange;
     color: red;
 } 
 
@@ -443,8 +478,8 @@ span:hover {
     "menu cabeza"/* fila 1 */
     "menu secciones"/*fila2*/
     "menu descripcion"/*fila3*/
-   "formulario productos"/* fila 4 */
-   "formulario imagenes"/* fila 5 */
+    "productos productos"
+    "imagenes imagenes"/* fila 5 */
     "pie pie"/*fila 6*/
 ;
 
@@ -476,8 +511,7 @@ footer{
         display: flex;
     flex-flow:column;
     background-color:$fondo;
-
-    
+    padding:20px;
 }
 }
 

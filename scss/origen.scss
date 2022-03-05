@@ -16,18 +16,19 @@
     }
 }
 
+//Clases//
+
 .productos{
     @extend .contacto;
     color:black;
 }
-
 
 .border {
     border: 1px solid black;
 }
 
 .fondo{
-    background-color:white;
+    background-color:$fondo;
     color:blueviolet;
 }
 .fondoUno{
@@ -36,6 +37,18 @@
 
 }
 
+.flor{
+    background-color:$fondo;
+    }
+    
+    .centerMenu{
+        padding: 1rem 9rem 1rem 9rem;
+    }
+    
+    .titulo5{
+        background-color:rgb(253, 39, 75);
+    }
+    
 header{
 
     h1{
@@ -45,15 +58,3 @@ header{
 
 }
 
-
-.flor{
-background-color:$fondo;
-}
-
-.centerMenu{
-    padding: 1rem 9rem 1rem 9rem;
-}
-
-.titulo5{
-    background-color:rgb(253, 39, 75);
-}

@@ -129,5 +129,8 @@
     "url": "https://github.com/pausca/subidaservidorscaglione/issues"
   },
   "homepage": "https://github.com/pausca/subidaservidorscaglione#readme",
+  "keywords": [
+    "+"
+  ],
   "description": ""
 }
