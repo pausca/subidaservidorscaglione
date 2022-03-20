@@ -536,7 +536,7 @@ footer {
 .contacto, .productos {
   background-color: #f3d0de;
   text-align: center;
-  color: grey;
+  color: black;
 }
 .contacto h2, .productos h2 {
   color: blueviolet;
