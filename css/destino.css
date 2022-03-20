@@ -109,6 +109,11 @@ footer {
     padding: 2px;
   }
 
+  .productosNav {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
   /*Animaciones*/
   .transicion1 {
     background-color: #fff;
@@ -174,7 +179,7 @@ footer {
 .flexMenu {
   display: flex;
   flex-direction: column;
-  padding-left: 15%;
+  padding-left: 5%;
   text-align: center;
 }
 
@@ -187,6 +192,10 @@ footer {
   display: flex;
   flex-flow: row nowrap;
   background-color: #f3d0de;
+}
+
+.contactoNav {
+  padding-left: 10px;
 }
 
 /* TABLET */
@@ -223,6 +232,10 @@ footer {
   .regist {
     padding-bottom: 0.01px;
     padding-top: 10px;
+  }
+
+  .contactoNav {
+    padding-left: 10px;
   }
 
   span:hover {
@@ -510,6 +523,14 @@ body header h1 {
 body {
   font-family: "Dancing Script", cursive;
   font-family: "Indie Flower", cursive;
+}
+
+footer {
+  background-color: orange;
+}
+
+.esto {
+  background-color: #f3d0de;
 }
 
 .contacto, .productos {

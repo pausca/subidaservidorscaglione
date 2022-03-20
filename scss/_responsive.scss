@@ -122,6 +122,11 @@ footer{
     padding:2px;
 }
 
+.productosNav{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 /*Animaciones*/
 
 .transicion1{
@@ -197,7 +202,7 @@ footer{
     .flexMenu {
         display: flex;
         flex-direction:column;
-        padding-left: 15%;
+        padding-left: 5%;
         text-align:center;
     }
 
@@ -210,6 +215,11 @@ footer{
     display: flex;
     flex-flow:row nowrap;
     background-color:$fondo;
+}
+
+.contactoNav{
+    padding-left: 10px;
+    
 }
 
 /* TABLET */
@@ -246,7 +256,10 @@ footer{
     padding-bottom:0.01px;
     padding-top: 10px;
     }
-
+    .contactoNav{
+        padding-left: 10px;
+        
+    }
 span:hover {
     background-color:orange;
     color: red;
@@ -517,6 +530,7 @@ footer{
 
 .contactoNav{
     padding-right: 50px;
+    
 }
 .floresTable{
 padding-right:250px;
